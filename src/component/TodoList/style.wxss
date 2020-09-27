@@ -1,0 +1,90 @@
+button {
+  outline: none;
+}
+.input-line {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+}
+.input-line .todo-input {
+  flex: 1;
+  height: 32px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  outline: none;
+}
+.input-line .todo-input:focus {
+  border-color: #1890ff;
+}
+.input-line .confirm-btn {
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  margin-left: 10px;
+  border: none;
+  background: #1890ff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #fff;
+}
+.input-line .confirm-btn:hover {
+  background: #40a9ff;
+}
+.todo-list {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.todo-list .list-head {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 14px;
+  background: #fdfdfd;
+}
+.todo-list .list-ul {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 9px;
+}
+.todo-list .list-item {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 5px 0;
+}
+.todo-list .list-item:last-child {
+  border: none;
+}
+.todo-list .list-item .content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.todo-list .list-item .content .item-words {
+  margin-left: 2px;
+}
+.todo-list .list-item .delete-btn {
+  border: none;
+  background: #fa541c;
+  cursor: pointer;
+  width: 35px;
+  border-radius: 2px;
+}
+.todo-list .list-item .delete-btn:hover {
+  background: #ff7a45;
+}
+.todo-list .list-item .delete-btn .del-pic {
+  width: 24px;
+  fill: #fff;
+}
