@@ -1,7 +1,8 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useRef, useEffect } from 'react';
 import { UserType } from '@/component/UserList';
 import { Skeleton } from 'antd'
 // import UserSearch from '@/component/UserSearch'
+import ClassTest from '@/component/ClassTest'
 
 const UserSearch = React.lazy(() => import('@/component/UserSearch'))
 const UserList = React.lazy(() => import('@/component/UserList'))
@@ -32,7 +33,12 @@ const dataSource: UserType[] = [
 
 export default function User() {
   const [search, setSearch] = useState<string>('')
+  const timeRef = useRef(null)
   const [source, setSource] = useState<UserType[]>(dataSource)
+
+  useEffect(() => {
+    console.log('test')
+  }, [])
 
   const showList = (): UserType[] => {
     const newList: UserType[] = []
@@ -65,6 +71,7 @@ export default function User() {
         width: '800px',
         padding: '20px'
       }}
+      ref={timeRef}
     >
       <Suspense
         fallback={
@@ -84,6 +91,7 @@ export default function User() {
           onDelete={handleDelete}
         />
       </Suspense>
+      <ClassTest />
     </div>
   )
 }
